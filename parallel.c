@@ -59,7 +59,7 @@ void readStop(){
 int checkStopwords(char *key){
   int i;
   int temp=0;
-  #pragma omp parallel for private(i) schedule(dynamic,100) reduction(+:temp) num_threads(8)
+  #pragma omp parallel for private(i) schedule(dynamic,100) reduction(+:temp) num_threads(4)
   for(i=0;i<stopLength;i++){
     if(strcmp(stop[i],key) == 0)
       temp+=1;
@@ -69,23 +69,23 @@ int checkStopwords(char *key){
 
 int findCountPos(char *key){
   int i,count=0;
-  #pragma omp parallel for private(i) schedule(dynamic,100) reduction(+:count) num_threads(8)
+  #pragma omp parallel for private(i) schedule(dynamic,2500) reduction(+:count) num_threads(4)
   for(i=0;i<posLength;i++){
     if(strcmp(key,positive[i])==0)
       count++;
   }
-  printf("%s %d\n",key,count );
+  //printf("%s %d\n",key,count );
   return count;
 }
 
 int findCountNeg(char *key){
   int i,count=0;
-  #pragma omp parallel for private(i) schedule(dynamic,100) reduction(+:count) num_threads(8)
+  #pragma omp parallel for private(i) schedule(dynamic,2500) reduction(+:count) num_threads(4)
   for(i=0;i<negLength;i++){
     if(strcmp(key,negative[i])==0)
       count++;
   }
-  printf("%s %d\n",key,count );
+  //printf("%s %d\n",key,count );
   return count;
 }
 
@@ -117,10 +117,10 @@ void print(int a) {
 
 void readTest(){
   int count=0,i,stringsize;
-  char temp[1000],temp2[1000];
+  char temp[10000],temp2[10000];
   char a[100];
   printf("Enter Sentence to be processed :");
-  gets(temp,sizeof(temp),stdin);
+  fgets(temp,sizeof(temp),stdin);
   //printf("%s \n",temp);
   strcpy(temp2,temp);
   char *token=strtok(temp," ");
@@ -154,8 +154,8 @@ void readTest(){
 
   //token=(char *)strtok(temp," ");
   testLength=count;
-  print(2);
 }
+//print(2);
 
 
 void readpos(){
@@ -247,7 +247,7 @@ int main()
 
 
   //Evaluating
-  #pragma omp parallel for private(i) schedule(dynamic,1000) reduction(+:TotalPos) num_threads(8)
+  #pragma omp parallel for private(i) schedule(dynamic) reduction(+:TotalPos) num_threads(4)
   for(i=0;i<testLength;i++){
     if (negation(test[i]) == 1){
         flag=1;
@@ -273,7 +273,7 @@ int main()
 
   }
 
-  #pragma omp parallel for private(i) schedule(dynamic,1000) reduction(+:TotalNeg) num_threads(8)
+  #pragma omp parallel for private(i) schedule(dynamic) reduction(+:TotalNeg) num_threads(8)
   for(i=0;i<testLength;i++){
     if (negation(test[i]) == 1){
         flag=1;

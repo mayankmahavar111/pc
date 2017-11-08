@@ -72,7 +72,7 @@ int findCountPos(char *key){
     if(strcmp(key,positive[i])==0)
       count++;
   }
-  printf("%s %d\n",key,count );
+  //printf("%s %d\n",key,count );
   return count;
 }
 
@@ -82,7 +82,7 @@ int findCountNeg(char *key){
     if(strcmp(key,negative[i])==0)
       count++;
   }
-  printf("%s %d\n",key,count );
+  //printf("%s %d\n",key,count );
   return count;
 }
 
@@ -114,23 +114,15 @@ void print(int a) {
 
 void readTest(){
   int count=0,i,stringsize;
-  char temp[1000],temp2[1000];
+  char temp[10000],temp2[10000];
   char a[100];
   printf("Enter Sentence to be processed :");
-  gets(temp,sizeof(temp),stdin);
+  fgets(temp,sizeof(temp),stdin);
   //printf("%s \n",temp);
   strcpy(temp2,temp);
   char *token=strtok(temp," ");
   while(token != NULL){
     count++;
-    //printf("%s\n",token );
-    //strcpy(a,token);
-    //printf("%s\n",a );
-    /*
-    stringsize=strlen(a);
-    test[i] = (char *)malloc(stringsize+2);
-    strcpy(test[i],a);
-    */
     token = strtok(NULL, " ");
   }
   //printf("%d\n",count );
@@ -151,7 +143,7 @@ void readTest(){
 
   //token=(char *)strtok(temp," ");
   testLength=count;
-  print(2);
+  //print(2);
 }
 
 
@@ -304,6 +296,6 @@ int main()
     printf("Negative Sentence\n" );
 
   t=clock()-t;
-  printf("%lf\n",((double )t)/1000000 );
+  printf("%lf\n",((double )t)/100000 );
 
 }

@@ -1,0 +1,50 @@
+﻿  
+  G:\test\pc\pc-cuda\pc-cuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "G:\test\pc\pc-cuda\pc-cuda\kernel.cu" -clean 
+  kernel.cu
+  Compiling CUDA source file kernel.cu...
+  
+  G:\test\pc\pc-cuda\pc-cuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2017 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "G:\test\pc\pc-cuda\pc-cuda\kernel.cu" 
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(69): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(143): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(175): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "posProb" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "negProb" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "posCons" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "negCons" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(255): warning : variable "negarrayCount" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(256): warning : variable "posarray_d" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(257): warning : variable "negarray_d" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(260): warning : variable "t" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(69): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(143): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(175): warning : variable "n" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "posProb" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "negProb" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "posCons" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(253): warning : variable "negCons" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(255): warning : variable "negarrayCount" was set but never used
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(256): warning : variable "posarray_d" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(257): warning : variable "negarray_d" was declared but never referenced
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(260): warning : variable "t" was set but never used
+  kernel.cu
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(86): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(69): warning C4101: 'n': unreferenced local variable
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(125): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(160): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(143): warning C4101: 'n': unreferenced local variable
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(192): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(175): warning C4101: 'n': unreferenced local variable
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(271): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(272): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(302): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(303): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(326): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(327): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(334): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(256): warning C4101: 'posarray_d': unreferenced local variable
+G:/test/pc/pc-cuda/pc-cuda/kernel.cu(257): warning C4101: 'negarray_d': unreferenced local variable
+  pc-cuda.vcxproj -> G:\test\pc\pc-cuda\x64\Debug\pc-cuda.exe
+  copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\cudart*.dll" "G:\test\pc\pc-cuda\x64\Debug\"
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\cudart32_90.dll
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\cudart64_90.dll
+          2 file(s) copied.
